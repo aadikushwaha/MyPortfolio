@@ -5,21 +5,21 @@ const projectList = [
     title: "Ecommerce",
     description:
       "A modern shopping platform for browsing products, adding to cart, and secure checkout.",
-    image: "/assets/img/portfolio/product-1.jpg",
-    technologies: ["React", "MongoDB", "Node.js"],
+    image: "/assets/img/portfolio/ecommerce.jpg",
+    technologies: ["React","ExpressJS", "MongoDB", "Node.js"],
   },
   {
     title: "Prescripto",
     description:
       "Book doctor appointments, manage prescriptions, and consult online with this healthcare app.",
-    image: "/assets/img/portfolio/app-1.jpg",
+    image: "/assets/img/portfolio/Prescripto.jpg",
     technologies: ["Vite", "Tailwind CSS", "React", "Node.js"],
   },
   {
-    title: "Books App",
+    title: "Personal Portfolio",
     description:
-      "A digital library platform to browse, save, and review books.",
-    image: "/assets/img/portfolio/books-1.jpg",
+      "A Personal Portfolio to showcase skills, Projects, Education.",
+    image: "/assets/img/portfolio/portfolio.jpg",
     technologies: ["React", "Express", "MongoDB", "Node.js"],
   },
 ];

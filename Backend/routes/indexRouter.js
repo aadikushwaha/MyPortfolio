@@ -1,8 +1,7 @@
-var express = require('express')
-var Router =  express.Router()
-var indexController  = require('../Controller/indexController')
-// Router.get('/about',indexController.about)
-// Router.get ('/',indexController.index)
-Router.post('/',indexController.register)
+const express = require('express')
+const Router = express.Router()
+const indexController = require('../Controller/indexController')
+Router.post('/', indexController.register)
+// Router.post('/test',indexController.test)
 
 module.exports = Router

@@ -9,6 +9,8 @@ const Contact = () => {
 
   const handleContact = async (e) => {
     e.preventDefault();
+
+    try {
     let params = {
       "name": name,
       "email": email,
@@ -16,23 +18,33 @@ const Contact = () => {
       "message": message
     }
    
-
-    axios.post(`http://localhost:3444/`, params)
-      .then((response) => {
-
-         alert(response.data.message);
-        setname("")
-        setemail("")
-        setsubject("")
-        setmessage("")
-        })
-      .catch((err) => {
-        alert(err.response.data.message);
+      console.log(params);
+      const response = await axios.post(`http://localhost:5000/`, params, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
       })
-
-
-
-
+      // .then((response) => {
+      //   console.log(response.data)
+      //   alert(response.data.message);
+      //   setname("")
+      //   setemail("")
+      //   setsubject("")
+      //   setmessage("")
+      //   })
+      alert(response.data.message)
+      setname("")
+      setemail("")
+      setsubject("")
+      setmessage("")
+    }
+    catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert('An error occurred. Please try again.');
+      }
+    }
   }
 
 
@@ -73,9 +85,7 @@ const Contact = () => {
       <p>adityakushwaha9477@gmail.com</p>
     </div>
   </div>
-</div>
-
-            </div>
+              </div>      </div>
 
             <div className="col-lg-7">
               <form method="post" onSubmit={handleContact} className="php-email-form" data-aos="fade-up" data-aos-delay="200">

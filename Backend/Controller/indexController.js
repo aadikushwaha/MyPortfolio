@@ -1,10 +1,18 @@
 const customerModal = require("../Modal/customerModal")
 const dotenv = require('dotenv')
 const { transporter } = require("../mailer")
-dotenv.config();
+dotenv.config(
+    {
+        path: '../env/secure.env'
+    }
+);
+
+// const test = async (req, res) =>{
+//  res.json({ message: '✅ Frontend & Backend connected successfully!' });}
+
 const register = async (req, res) => {
     
-    const { email } = req.body
+    const { email, name } = req.body
     
     var isExist = await customerModal.findOne({ email })
   
@@ -18,10 +26,10 @@ const register = async (req, res) => {
       
     
 try{
-    var newCustomer= new  customerModal(req.body)
+    var newCustomer = new customerModal(req.body)
     const customerrecord = await newCustomer.save()
-   const {email, name} = req.body
-   
+    console.log(customerrecord);
+
    try {
      await transporter.sendMail({
         from:process.env.EMAIL_USER,
@@ -43,6 +51,7 @@ adityakushwaha9477@gmail.com
 8103489477`
                
    })} catch (error) {
+       console.log(error);
             
    }
 
@@ -55,24 +64,9 @@ adityakushwaha9477@gmail.com
     }
     catch(err){
         console.error("Error in sending");
-        res.status(500).json({ success: false, message: "User registered but email failed." });
+    res.status(500).json({ success: false, message: "Something went wrong." });
     }
 }
-    // return res.status(200).json({
-    //     status:true,
-    //     "msg":"The message sent Successfully",
-    //      "record": customerrecord
-    // })
-    
-// }
-// catch(error){
-//     return res.status(400).json({
-//         status:false,
-//         "msg":"error",
-//         "error":error
-//     })
-// }}
-
 
 module.exports = {
     register

@@ -1,5 +1,6 @@
 const Header = () => {
   return (
+    <>
 
   <header id="header" className=" header dark-background d-flex flex-column">
     <i className="header-toggle d-xl-none bi bi-list"></i>
@@ -14,6 +15,7 @@ const Header = () => {
     <div className="logo d-flex align-items-center justify-content-center">
       <h1 className="sitename">Aditya Kushwaha</h1>
     </div>
+
     <div className="social-links text-center">
      <a href="https://x.com/adityak9477?t=gIOoyEF2rhUK2SZGsPjiAA&s=09" className="twitter"><i className="bi bi-twitter-x"></i></a>
       <a href="https://www.facebook.com/share/18YgJ5BnNy/" className="facebook"><i className="bi bi-facebook"></i></a>
@@ -36,6 +38,8 @@ const Header = () => {
 
   </header>
 
-    )
+
+    </>
+  )
 };
 export default Header;

@@ -13,22 +13,19 @@ import Projects from './components/Projects'
 
 function App() {
 
-  return (<>
-    <body id="main" className=
-      " index-page">
-
+  return (
+    <>
       <Header />
       <main className="main">
         <Home />
         <About />
         <Skills />
-                    <Resume />
+        <Resume />
         <Projects />
         <Services />
         <Contact />
       </main>
       <Footer />
-    </body>
 
   </>
 

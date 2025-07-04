@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="row gy-4">
 
             <div className="col-lg-5">
-<div className="info-wrap d-flex flex-column gap-4">
+<div className="info-wrap d-flex flex-col gap-4">
   <div className="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
     <i className="bi bi-geo-alt flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
     <div>

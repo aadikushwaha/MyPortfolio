@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router'
 import './App.css'
-import Index from './pages/Index'
 import Header from './components/Header'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -10,12 +9,13 @@ import Footer from './components/Footer'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import Projects from './components/Projects'
+import Index from './pages/Index'
 
 function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <main className="main">
         <Home />
         <About />
@@ -25,8 +25,8 @@ function App() {
         <Services />
         <Contact />
       </main>
-      <Footer />
-
+      <Footer /> */}
+<Index/>
   </>
 
 

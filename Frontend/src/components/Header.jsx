@@ -12,8 +12,9 @@ const Header = () => {
   />
 </div>
 
-    <div className="logo d-flex align-items-center justify-content-center">
-      <h1 className="sitename">Aditya Kushwaha</h1>
+    <div className="logo d-flex flex-col align-items-center justify-content-center">
+      <h1 className="sitename mt-5 text-xl">Aditya Kushwaha</h1>
+      <h2 className="p-3 ">MERN Stack Developer</h2>
     </div>
 
     <div className="social-links text-center">

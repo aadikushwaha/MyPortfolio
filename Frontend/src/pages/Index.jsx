@@ -11,9 +11,9 @@ import Footer from "../components/Footer";
 
 const Index = () => {
   return (
-    <>
     
-  <body id="main" className=
+    
+  <div className=
   " index-page">
       
           <Header />
@@ -27,9 +27,8 @@ const Index = () => {
             <Contact />
           </main>
           <Footer/>
-        </body>
-      
-    </>
+       
+    </div>
       
   );
 };

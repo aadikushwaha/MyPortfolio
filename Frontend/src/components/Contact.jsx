@@ -24,14 +24,14 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       })
-      // .then((response) => {
-      //   console.log(response.data)
-      //   alert(response.data.message);
-      //   setname("")
-      //   setemail("")
-      //   setsubject("")
-      //   setmessage("")
-      //   })
+      .then((response) => {
+        console.log(response.data)
+        alert(response.data.message);
+        setname("")
+        setemail("")
+        setsubject("")
+        setmessage("")
+        })
       alert(response.data.message)
       setname("")
       setemail("")

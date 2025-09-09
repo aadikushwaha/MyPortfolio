@@ -51,7 +51,7 @@ adityakushwaha9477@gmail.com
 8103489477`
                
    })} catch (error) {
-       console.log(error);
+       console.log(error.message);
             
    }
 

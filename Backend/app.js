@@ -12,7 +12,7 @@ dotenv.config({
 var port = process.env.PORT ||5000
 
 // Connect to database
-DB_Connect("Database", "mongodb://localhost:27017/")
+DB_Connect("Database", "mongodb+srv://aditya9477:<db_password>@cluster0.2gpl38v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 const corsOptions = {
     origin: 'http://localhost:5173',

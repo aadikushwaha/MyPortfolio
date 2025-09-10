@@ -4,7 +4,7 @@ const DB_Connect = async (DB_NAME,DB_URL)=>{
         await mongoose.connect(DB_URL+DB_NAME, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    });)
+    })
         console.log("The database connected");
         
     } catch (error) {
